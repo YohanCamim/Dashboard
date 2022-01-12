@@ -7,7 +7,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module'
 
 @Module({
-  imports: [MongooseModule.forRoot("mongodb+srv://admin:admin@dbshowtime.dsdpa.mongodb.net/DashboardDB?retryWrites=true&w=majority"),AuthModule,WidgetsModule],
+  imports: [MongooseModule.forRoot(SECRET_URL_MONGODB),AuthModule,WidgetsModule],
   controllers: [AppController],
   providers: [AppService],
 })
